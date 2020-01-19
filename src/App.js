@@ -125,7 +125,7 @@ class App extends Component {
         {/* Input form only visible to admin user */}
         {this.state.isSignedIn &&
           this.state.user &&
-          this.state.user.uid === process.env.REACT_APP_ADMIN_UID && (
+          this.state.user.uid === process.env.REACT_APP_PID && (
             <div className="add-enemy-form">
               <input ref={this.inputRef} />
               <button onClick={this.addEnemy}>add enemy</button>
