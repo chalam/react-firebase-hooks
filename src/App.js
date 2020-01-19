@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      enemies: ["one", "two", "three"]
+    };
+    // ref to input element
+    this.inputRef = React.createRef();
+  }
+
+  // const [enemies, setEnemies] = useState(["one", "two", "three"]);
+  // useEffect() {
+  //   setEnemies(removeEnemy(enemyToRemove)
+  // }
+
+  removeEnemy = enemyToRemove => {
+    this.setState({
+      enemies: this.state.enemies.filter(enemy => enemy !== enemyToRemove)
+    });
+  };
+
+  addEnemy = () => {
+    this.setState({
+      enemies: this.state.enemies.concat(this.inputRef.current.value)
+    });
+    this.inputRef.current.value = "";
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">Input no persistance</header>
+        <div className="add-enemy-form">
+          <input ref={this.inputRef} />
+          <button onClick={this.addEnemy}>add enemy</button>
+        </div>
+        <div className="enemies-list">
+          {this.state.enemies.map(enemy => (
+            <button onClick={() => this.removeEnemy(enemy)} key={enemy}>
+              {enemy}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

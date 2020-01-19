@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: sans-serif;
 }
 
 .App-logo {
@@ -15,13 +16,16 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-color: #222;
+  height: 40px;  
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
 .App-link {
@@ -35,4 +39,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.add-enemy-form {
+  margin-bottom: 5px;
+}
+
+.enemies-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
