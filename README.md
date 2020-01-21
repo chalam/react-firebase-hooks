@@ -1,6 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React App based on firebase and react hooks
+Building Todo The Game In A Cloud Only Dev Environment - Christina Holland - React Conf 2018
+https://github.com/hsubox76/cloud-demo
+https://youtu.be/kVSTKD13gos?list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ
+Setup Firebase at https://console.firebase.google.com/
 
-## setup Firebase at https://console.firebase.google.com/
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
